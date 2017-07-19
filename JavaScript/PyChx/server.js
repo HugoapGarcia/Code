@@ -60,11 +60,11 @@ var upload = multer({ storage: storage }); //Passing path and correct name and t
 
 //Header & Token Access const
 const headers = {
-  'Authorization': 'Bearer 9eb4623faa68603a77380bc0f220c43d854fc98f9e18118955dd3b339979fe60',
+  'Authorization': '?',
   'Content-type' : 'application/x-www-form-urlencoded'
 }
 
-const token = "9eb4623faa68603a77380bc0f220c43d854fc98f9e18118955dd3b339979fe60";
+const token = "?";
 
 //Application
 var app = express();
@@ -573,50 +573,7 @@ var readExcelXLS = function(req, res, next){
   var workbook = XLS.readFile(in_path2);
   var worksheet = workbook.Sheets['Sheet1'];
   var sheet_name_list = workbook.SheetNames;
-  /*var headers = {};
-  var data = [];
-  var data4 = [];
-  for(item in worksheet){
-    if(item[0] === '!') continue;
-      var t = 0;
-      for (var i = 0; i < item.length; i++) {
-          if (!isNaN(item[i])) {
-              t = i;
-              break;
-          }
-      }
-      var object = {
-          column: item.substring(0, t),
-          row: parseInt(item.substring(t)),
-          value: worksheet[item].v
-      }
-
-      data.push(object);
-      var col = item.substring(0,1);
-      var rows = parseInt(item.substring(1));
-
-      if(rows == 1 ){
-        headers[col] = worksheet[item].v;
-        continue;
-      }
-
-      if(!data4[rows]) data4[rows] = {};
-      data4[rows][headers[col]] = worksheet[item].v;
-
-
-
-  }
-  var test_object = {};
-  var test2_object = {};
-
-
-  data.forEach(function(value, index){
-      test2_object[value.row] = value;
-      test_object[value.column] = test2_object;
-
-  });*/
-
-
+  
   //Parsing file to Json
   sheet_name_list.forEach(function(y) {
       var worksheet = workbook.Sheets[y];
@@ -672,7 +629,7 @@ var apirequest = function(req, res, next){
   //Lets post the following key/values as form
     json: { key: 'time_entries' },
   headers: {
-    'Authorization': 'Bearer 9eb4623faa68603a77380bc0f220c43d854fc98f9e18118955dd3b339979fe60',
+    'Authorization': '?',
     'Content-type' : 'application/x-www-form-urlencoded',
 
   }
