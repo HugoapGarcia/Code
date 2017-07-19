@@ -1,0 +1,51 @@
+﻿@model BiogenRepository.ViewModels.CategoryAdminListViewModel
+@using BiogenRepository.ViewModels;
+@using Orchard.Utility.Extensions;
+@{
+    Script.Require("ShapesBase");
+    Script.Require("PropertiesJS");
+    Style.Require("PropertiesAdmin");
+    Layout.Title = T("Biogen Repository Manager").ToString();
+}
+<div class="notes">
+    <p><strong>PLEASE NOTE:</strong> If you notice that the DELETE action is not available for a CATEGORY that you wish to delete, this means that the CATEGORY belongs to a TEMPLATE. Please appropriately edit or delete the TEMPLATE that the CATEGORY belongs to first, then you will have the option to DELETE the CATEGORY.</p>
+</div>
+@Html.ValidationSummary() 
+<div class="manage">
+    @Display.EditorTemplate(TemplateName: "Parts/CreateCategory", Model: ViewData["CreateCategory"] != null ? ViewData["CreateCategory"] : new CategoryAdminCreateViewModel(Model.DropdownOrderSelections))
+</div>
+@using(Html.BeginFormAntiForgeryPost()) 
+{
+    <fieldset>
+        <table class="items" summary="@T("This is a table of the categories in the Biogen Repository")" >
+            <colgroup>
+                <col id="Title" />
+                <col id="Edit" />
+            </colgroup>
+            <thead>
+                <th scope="col">@T("Title")</th>
+                <th scope="col">@T("Order")</th>
+                <th scope="col"></th>
+            </thead>
+            @{var categoryIndex = 0;}
+            @foreach (var categoryEntry in Model.Categories)
+            { 
+            <tr>
+                <td>
+                    @categoryEntry.Category.CategoryTitle
+                </td>
+                <td>
+                    @categoryEntry.Category.CategoryOrder
+                </td>
+                <td>
+                    @Html.ActionLink(T("Edit").ToString(), "CategoryEdit", new {id = categoryEntry.Category.Id})
+                    @if (categoryEntry.AllowDelete) { @T(" | ")
+                        <a href="@Url.Action("CategoryRemove", new {categoryEntry.Category.Id, returnUrl = ViewContext.RequestContext.HttpContext.Request.ToUrlString()})" itemprop="RemoveUrl UnsafeUrl">@T("Delete")</a>
+                    }
+                </td>
+            </tr>
+                categoryIndex = categoryIndex + 1;
+            }
+        </table>
+    </fieldset>
+}

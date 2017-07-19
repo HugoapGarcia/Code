@@ -1,0 +1,21 @@
+﻿@model CMSCloudbuilderPresentation.Models.Product
+
+<tr data-searchable="@(String.IsNullOrEmpty(Model.ProductMainTitle) ? "" : Model.ProductMainTitle.ToLower())">
+	<td>@Html.DisplayFor(m => m.ProductId)</td>
+	<td>@Html.DisplayFor(m => m.ProductMainTitle)</td>
+	<td>@Html.DisplayFor(m => m.ProductSubTitle)</td>
+	<td>@Html.DisplayFor(m => m.ProductCreationDate)</td>
+	<td>
+		<div class="btn-group pull-right">
+			@Html.ActionLink("Edit", "Edit", new { id=Model.ProductId }, new { @class = "btn btn-default btn-sm" })
+			@if(Session["UserRole"] != "3") {
+				if(Model.ArchiveLevel == null || Model.ArchiveLevel == 0) {
+					@Html.ActionLink("Archive", "Archive", new { id = Model.ProductId }, new { @class = "btn btn-default btn-sm" })
+				} else {
+					@Html.ActionLink("Un-Archive", "Unarchive", new { id = Model.ProductId }, new { @class = "btn btn-default btn-sm" })
+					@Html.ActionLink("Delete", "Delete", new { id = Model.ProductId }, new { @class = "btn btn-default btn-sm" })
+				}
+			}
+		</div>
+	</td>
+</tr>

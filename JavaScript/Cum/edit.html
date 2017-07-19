@@ -1,0 +1,1006 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="edit.css">
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="prettify.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="css/cummins-style.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="fullpage.js/dist/jquery.fullPage.min.css">
+
+    <title>Cummins Controller</title>
+</head>
+
+<body>
+    <button class="exit"><img src="png/button_exit_dn.png" alt=""></button>
+
+    <div class="overlay"></div>
+
+    <div class="panel_zoom">
+        <button class="close_zoom"><img src="png/popup_close_button.png" alt=""></button>
+        <img class="left_zoom">
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <h1 id="version_tab"></h1>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                </div>
+
+
+                <div class="modal-body">
+                    <div class="row engines">
+                        <h1 class="who_am_i">yodoe</h1>
+                        <div class="col-xs-2">
+                            <ul class="engine_tabs">
+                                <p>Hide</p>
+                                <li id="qsk67_tab">
+                                    <input id="qsk67_input" type="checkbox">B6.7 &#9776;</li>
+                                <li id="qsk15_tab">
+                                    <input id="qsk15_input" type="checkbox">X15 &#9776;</li>
+                                <li id="qsk19_tab">
+                                    <input id="qsk19_input" type="checkbox">QSK19 &#9776;</li>
+                                <li id="qsk23_tab">
+                                    <input id="qsk23_input" type="checkbox">QSK23 &#9776;</li>
+                                <li id="qst30_tab">
+                                    <input id="qst30_input" type="checkbox">QST30 &#9776;</li>
+                                <li id="qsk38_tab">
+                                    <input id="qsk38_input" type="checkbox">QSK38 &#9776;</li>
+                                <li class="active" id="qsk50_tab">
+                                    <input id="qsk50_input" type="checkbox">QSK50 &#9776;</li>
+                                <li id="qsk60_tab">
+                                    <input id="qsk60_input" type="checkbox">QSK60 &#9776;</li>
+                                <li id="qsk78_tab">
+                                    <input id="qsk78_input" type="checkbox">QSK78 &#9776;</li>
+                                <li id="qsk95_tab">
+                                    <input id="qsk95_input" type="checkbox">QSK95 &#9776;</li>
+                            </ul>
+
+                        </div>
+                        <div class="col-xs-10">
+
+                            <ul class="nav nav-tabs" id="tabContent2">
+                                <li class="active"><a href="#hotspots_tab" data-toggle="tab">Hot Spots</a></li>
+                                <li><a id="spect1" href="#specs_tab" data-toggle="tab">Specs</a></li>
+                                <li><a href="#infographics_tab" data-toggle="tab">Infographics</a></li>
+                                <li><a href="#title_tab" data-toggle="tab">Title</a></li>
+                                <li><a href="#General_tab" data-toggle="tab">General</a></li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="hotspots_tab">
+                                    <p class="hotspot_hide">Hide</p>
+
+
+                                    <!--Text Editor here-->
+                                    <center>
+                                        <form method="POST" action="#" id="form" style="display:none;" class="positionform">
+                                            <div class="row">
+                                                <div>
+                                                    <!--<input type="text" class="form-control inputarea"  id="textinputarea">-->
+                                                    <button class="btn btn-primary" style="margin-left: 27%;" id="dismiss" type="button">Dismiss</button>
+                                                    <div class="separator"></div>
+                                                </div>
+                                                <div class="col-md-3"></div>
+                                                <div class="hero-unit">
+
+                                                    <div id="alerts"></div>
+                                                    <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
+
+
+                                                        <div class="btn-group">
+                                                            <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a>
+                                                            <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a>
+
+                                                            <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="icon-list-ul"></i></a>
+                                                            <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="icon-list-ol"></i></a>
+                                                        </div>
+                                                        <div class="btn-group">
+                                                            <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="icon-align-left"></i></a>
+                                                            <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="icon-align-center"></i></a>
+                                                            <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="icon-align-right"></i></a>
+                                                            <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="icon-align-justify"></i></a>
+                                                        </div>
+
+
+                                                    </div>
+
+                                                    <div id="editor">
+                                                        <!--<p id="display"></p>-->
+                                                    </div>
+                                                </div>
+                                                <!--<div>-->
+                                                <!--<center><button class="btn btn-primary" id="savehotspots"  type="button">Save</button></center> <!--Change the Variable to save here to make it work -->
+                                                <!--</div>-->
+                                        </form>
+                                    </center>
+                                    <!--Text Editor End-->
+
+
+
+
+                                    <ul class="hotspot_names"></ul>
+
+                                    <div class="control-group">
+                                        <!-- <label class="control-label">Instance Name</label> -->
+                                    </div>
+                                    </div>
+
+
+                                    <div class="tab-pane" id="specs_tab">
+                                        <ul class="specs_tab"></ul>
+
+                                    </div>
+
+                                    <div class="tab-pane" id="infographics_tab">
+                                        <ul class="infographics">
+                                            <li>
+                                                <input id="default-view" type="checkbox"> Default view </li>
+                                            <li>
+                                                <input id="performance" type="checkbox"> Performance Enhancements
+                                                <ul>
+                                                    <li>
+                                                        <input id="services" type="checkbox"> Service Intervals</li>
+                                                    <li>
+                                                        <input id="power" type="checkbox"> Power</li>
+                                                    <li>
+                                                        <input id="torque" type="checkbox"> Torque</li>
+                                                    <li>
+                                                        <input id="emission" type="checkbox"> Emissions</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <input id="fuel" type="checkbox"> Fuel Efficiency</li>
+                                            <li>
+                                                <input id="engine" type="checkbox"> Engine Envelope</li>
+                                            <li>
+                                                <input id="altitude" type="checkbox"> Use at Altitude</li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane" id="title_tab">
+                                        <div class="outer_title_box">
+                                            <h4>Header:</h4>
+                                            <div class="inner_box">
+                                                <p id="header_tab"></p>
+                                                <input id="head" type="checkbox">hide
+                                            </div>
+                                        </div>
+                                        <div class="outer_title_box">
+
+                                            <h4>Sub-header:</h4>
+                                            <div class="inner_box">
+                                                <p id="subheader_tab"></p>
+                                                <input id="sub-head" type="checkbox">hide
+                                            </div>
+                                        </div>
+                                        <!--             <div class="form-group">
+                  <label for="recipient-name" class="control-label">Header:</label>
+                  <input type="text" class="form-control" id="title">
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="control-label">Subheader:</label>
+                  <input type="text" class="form-control" id="subtitle">
+                </div> -->
+
+                                        </form>
+                                    </div>
+                                    <div class="tab-pane" id="General_tab">
+                                        <ul class="generalinfo">
+                                            <li>
+                                                <input id="btn_tier4final" type="checkbox">Tier 4 Final</li>
+                                            <li>
+                                                <input id="btn_scr" type="checkbox">SCR</li>
+                                            <li>
+                                                <input id="btn_customer" type="checkbox">Customer Care</li>
+                                            <li>
+                                                <input id="btn_about" type="checkbox">About Cummins</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button id="save" type="button" class="btn btn-primary ">Save</button>
+                        <button class="btn btn-primary" id="savehotspots" type="button" style="display:none;">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- homepage -->
+        <img class="background">
+        <div>
+
+            <!-- sliding pages -->
+            <div id="fullpage" class="swiper-container swiper-container-fullpage">
+                <img src="png/red_bar.png" style="margin-bottom: -0.2%; width: 100%;">
+                <img class="close_button" src="png/button_01_close.png">
+                <div class="swiper-wrapper">
+
+                    <!-- tier 4 -->
+                    <div id="page1" class="swiper-slide section">
+
+
+                        <div class="col-xs-8 container topheader">
+                            <img class="pencil_top" type="button" data-toggle="modal" data-target="#editorfinalModal" data-whatever="@fat">
+                            <div class="col-xs-1 half_container">
+                                <img src="extra/logo.svg" class="logo">
+                            </div>
+                            <div class="heading">
+                                <h1 id="header_tr">Tier 4 Final</h1>
+                                <h2 id="subheader_tr">Compliance</h2>
+                            </div>
+                        </div>
+
+
+                        <div class="middle_left_content_tier">
+                            <img class="pencil_top" type="button" data-toggle="modal" data-target="#editorfinalModal" data-whatever="@fat">
+
+                            <div id="content_tr" class="leftcontnet_tr"></div>
+                        </div>
+
+                        <div class="tier_bg">
+                            <img id="milestones" class="selection" src="png/popup.png">
+                            <img class="page_background" src="png/tier4_01_bg.png" alt="">
+
+                            <img class="tier_popup" src="png/tier4_01_popup.png" alt="">
+                            <img class="tier4_control_popup" src="png/tier4_01_control_popups_01.png">
+
+                            <div id="tier4_left_content" class="populated_content tier4_left"></div>
+                            <div id="tier4_right_content" class="populated_content tier4_right"></div>
+                            <div class="middle_right_content_tier">
+                                <img id="leftcontent_tr2" class="pencil_top" type="button" data-toggle="modal" data-target="#editorfinalModal" data-whatever="@fat">
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div id="right_content_tr" class="rightcontnet_tr"></div>
+                                    </div>
+                                </div>
+                                <div calss="row" style="height:15em;"></div>
+                                <!--<div class="row">
+                    <div class="col-xs-12">
+                      <div id="right_content_tr_bottom"></div>
+                    </div>
+                </div>-->
+
+
+                            </div>
+                        </div>
+                        <div id="bottom_bar">
+                            <ul>
+                                <li><img class="control_buttons" src="png/button_01_control_01.png"></li>
+                                <li><img class="control_buttons" src="png/button_01_control_02.png"></li>
+                                <li><img class="control_buttons" src="png/button_01_control_03.png"></li>
+                                <li><img class="control_buttons" src="png/button_01_control_04.png"></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                    <!-- scr -->
+                    <div id="page2" class="swiper-slide section">
+
+                        <div class="col-xs-8 container topheadersrc">
+
+                            <img class=" pencil_top" type="button" data-toggle="modal" data-target="#editorfinalModal" data-whatever="@fat">
+
+                            <div class="col-xs-1 half_container">
+                                <img src="extra/logo.svg" class="logo">
+                            </div>
+                            <div class="heading">
+                                <h1 id="header_scr">Selective Catalytic Reduction</h1>
+                                <h2 id="subheader_scr">(SCR)</h2>
+                            </div>
+                        </div>
+
+                        <div class="middle_left_content_scr">
+                            <img class="scr_button2 pencil_top" type="button" data-toggle="modal" data-target="#editorfinalModal" data-whatever="@fat">
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div id="left_content_scr" class="leftcontnet_tr"></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div id="left_title_scr2" class="subleft_title">
+                                        <img class="pencil_top" type="button" id="scrmodaleditor" data-toggle="modal" data-target="#editorfinalModal" data-whatever="@fat">
+                                    </div>
+                                    <div style="height: 5vw;"></div>
+                                    <div id="left_content_scr2" class="leftcontnet_scr2"></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="middle_right_content_scr">
+                            <img class="pencil_top" id="scr-rightmodal" type="button" data-toggle="modal" data-target="#editorfinalModal" data-whatever="@fat">
+
+
+                            <div class="col-xs-12">
+                                <div id="right_content_scr" class="rightcontentscr"></div>
+                            </div>
+
+                        </div>
+
+                        <div class="scr_bg">
+                            <img class="page_background" src="png/scr_02_bg.png" alt="">
+                            <div id="scr_lefttop_content" class="populated_content scr_lefttop"></div>
+                            <div id="scr_leftbottom_content" class="populated_content scr_leftbottom"></div>
+                            <div id="scr_right_content" class="populated_content scr_right"></div>
+                            <div id="bottom_bar_scr">
+                                <div class="bottom_popups">
+                                    <img>
+                                </div>
+                                <ul>
+                                    <li><img class="control_buttons" src="png/button_01_control_01.png"></li>
+                                    <li><img class="control_buttons" src="png/button_01_control_02.png"></li>
+                                    <li><img class="control_buttons" src="png/button_01_control_03.png"></li>
+                                    <li><img class="control_buttons" src="png/button_01_control_04.png"></li>
+                                    <li><img class="control_buttons" src="png/button_01_control_05.png"></li>
+                                    <li><img class="control_buttons" src="png/button_01_control_06.png"></li>
+                                    <li><img class="control_buttons" src="png/button_01_control_07.png"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- customer care -->
+                    <div id="page3" class="swiper-slide section">
+
+                        <div class="col-xs-6 container topheadercustomer">
+                            <img style="z-index:99999" class="pencil_top" type="button" id="distittle" data-toggle="modal" data-target="#editorfinalModal" data-whatever="@fat">
+
+                            <div class="col-xs-1 half_container">
+                                <img src="extra/logo.svg" class="logo">
+                            </div>
+                            <div class="heading">
+                                <h1 id="header_customer" style="    margin-left: 96px;">Customer Care</h1>
+                                <h2></h2>
+                            </div>
+                        </div>
+
+                        <div class="middle_left_content_customer leftcontnet_cust">
+                            <img class="pencil_top" style="z-index:99999" type="button" id="disteditor" data-toggle="modal" data-target="#editorfinalModal" data-whatever="@fat">
+
+
+                            <div class="col-xs-11">
+                                <div id="right_content_cs"></div>
+                            </div>
+
+
+
+                            <div class="col-xs-11">
+                                <img class="pencil_top" id="customer-lef2-modal" style="z-index:99999; margin-top:15vw;" type="button" id="disteditor" data-toggle="modal" data-target="#editorfinalModal" data-whatever="@fat">
+                                <div id="right_content_cs_center"></div>
+                            </div>
+
+
+
+                            <div class="col-xs-11">
+                                <img class="pencil_top" id="customer-lef3-modal" style="z-index:99999; margin-top:26vw;" type="button" id="disteditor" data-toggle="modal" data-target="#editorfinalModal" data-whatever="@fat">
+                                <div id="right_content_cs_bottom"></div>
+                            </div>
+
+
+
+                        </div>
+
+                        <div id="cc" class="cc_bg">
+                            <div class="cc_info">
+                                <div class="cc_popup_content"></div>
+                            </div>
+                            <canvas id="layer1" width="100" height="100"></canvas>
+                            <img id="dist" class="selection" src="png/button_circle_dn.png">
+                            <img id="process" class="selection" src="png/button_circle.png">
+                            <img class="page_background" src="png/cc_03_text.png" alt="">
+                            <img class="page_background network" src="png/cc_03_map.png" alt="">
+                            <img class="page_background network" src="png/map_tags.png" alt="">
+                            <img class="page_background process" src="png/panel_cc_03.png" alt="">
+                            <img class="page_background network names" src="png/map_names.png" alt="">
+                            <img id="state" class="page_background network">
+                            <img id="state_button" class="page_background  network">
+                            <div id="cc_top_content" class="populated_content cc_top"></div>
+
+                            <div id="cc_center_content" class="populated_content cc_center"></div>
+
+                            <div id="cc_bottom_content" class="populated_content cc_bottom"></div>
+
+                            <div class="cc_hotspots"></div>
+                            <!-- <div class="tier_test"></div> -->
+
+
+                        </div>
+                    </div>
+                    <!--about page-->
+                    <div id="page4" class="swiper-slide section">
+
+
+                        <div class="page_logo">
+                            <img src="extra/logo.svg">
+                            <div class="heading">
+                                <h1 id="ab_header"></h1>
+                                <h2 id="ab_subheader" class="history"></h2>
+                                <h2 class="it">Integrated Technologies</h2>
+                                <h2 class="people">People</h2>
+                            </div>
+                            <img class="pencil_top" type="button" data-toggle="modal" data-target="#editorfinalModal" data-whatever="@fat">
+
+                        </div>
+
+
+                        <!-- timeline slider -->
+                        <div id="timeline" class="swiper-container-timeline">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img class="history timeline_image" src="png/1919_popup.png">
+                                </div>
+                                <div class="swiper-slide"><img class="history timeline_image" src="png/1931_popup.png">
+                                </div>
+                                <div class="swiper-slide"><img class="history timeline_image" src="png/1932_popup.png">
+                                </div>
+                                <div class="swiper-slide"> <img class="history timeline_image" src="png/1935_popup.png">
+                                </div>
+                                <div class="swiper-slide"> <img class="history timeline_image" src="png/1936_popup.png">
+                                </div>
+                                <div class="swiper-slide"> <img class="history timeline_image" src="png/1946_popup.png">
+                                </div>
+                                <div class="swiper-slide"> <img class="history timeline_image" src="png/1951_popup.png">
+                                </div>
+                                <div class="swiper-slide"> <img class="history timeline_image" src="png/1955_popup.png">
+                                </div>
+                                <div class="swiper-slide"> <img class="history timeline_image" src="png/1957_popup.png">
+                                </div>
+                                <div class="swiper-slide"> <img class="history timeline_image" src="png/1972_popup.png">
+                                </div>
+                                <div class="swiper-slide"> <img class="history timeline_image" src="png/1981_popup.png">
+                                </div>
+                                <div class="swiper-slide"> <img class="history timeline_image" src="png/1998_popup.png">
+                                </div>
+                                <div class="swiper-slide"> <img class="history timeline_image" src="png/2004_popup.png">
+                                </div>
+                                <div class="swiper-slide"> <img class="history timeline_image" src="png/2015a_popup.png">
+                                </div>
+                                <div class="swiper-slide"> <img class="history timeline_image" src="png/2015b_popup.png">
+                                </div>
+                            </div>
+
+                            <div class="red_timeline_line history">
+                                <ul>
+                                    <li>
+                                        <img class="history timeline_icon" src="png/button_1919_dn.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img class="history timeline_icon" src="png/button_1931.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img class="history timeline_icon" src="png/button_1932.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img class="history timeline_icon" src="png/button_1935.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img class="history timeline_icon" src="png/button_1936.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img class="history timeline_icon" src="png/button_1946.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img class="history timeline_icon" src="png/button_1951.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img class="history timeline_icon" src="png/button_1955.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img class="history timeline_icon" src="png/button_1957.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img class="history timeline_icon" src="png/button_1972.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img class="history timeline_icon" src="png/button_1981.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img class="history timeline_icon" src="png/button_1998.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img class="history timeline_icon" src="png/button_2004.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img class="history timeline_icon" src="png/button_2015a.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img class="history timeline_icon" src="png/button_2015b.png" alt="">
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                        <!-- end timeline -->
+                        <div class="it">
+                            <div class="it_popup">
+                                <ul>
+                                    <li><img class="it_popup_img" src="png/panel_it_01.png"></li>
+                                    <li>
+                                        <p id="it_popup_content" class="it_popup_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus maxime optio velit, itaque quam tempore, ut cupiditate iure iusto blanditiis ducimus veniam autem veritatis dolorem molestiae dolorum distinctio
+                                            cum obcaecati.</p>
+                                    </li>
+
+                                </ul>
+
+
+                            </div>
+                            <div class="it_units">
+
+                                <ul class="units_list">
+                                    <li><img class="it_unit_image" src="png/button_engine.png"></li>
+                                    <li><img class="it_unit_image" src="png/button_pg.png"></li>
+                                    <li><img class="it_unit_image" src="png/button_component.png"></li>
+                                    <li><img class="it_unit_image" src="png/button_distribution.png"></li>
+                                </ul>
+                                <ul class="it_arrow">
+                                    <li>
+                                        <img class="it_arrow_image" src="png/line_arrow.png">
+
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <!-- it slider -->
+                            <div id="integrated" class="swiper-container-integrated">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img class="integrated_image" src="png/button_it_02.png">
+                                    </div>
+                                    <div class="swiper-slide"><img class="integrated_image" src="png/button_it_03.png">
+                                    </div>
+                                    <div class="swiper-slide"><img class="integrated_image" src="png/button_it_01.png">
+                                    </div>
+                                    <div class="swiper-slide"> <img class="integrated_image" src="png/button_it_07.png">
+                                    </div>
+                                    <div class="swiper-slide"> <img class="integrated_image" src="png/button_it_04.png">
+                                    </div>
+                                    <div class="swiper-slide"> <img class="integrated_image" src="png/button_it_05.png">
+                                    </div>
+                                    <div class="swiper-slide"> <img class="integrated_image" src="png/button_it_06.png">
+                                    </div>
+                                    <div class="swiper-slide"> <img class="integrated_image" src="png/button_pg_01.png">
+                                    </div>
+                                    <div class="swiper-slide"> <img class="integrated_image" src="png/button_pg_03.png">
+                                    </div>
+                                    <div class="swiper-slide"> <img class="integrated_image" src="png/button_pg_04.png">
+                                    </div>
+                                    <div class="swiper-slide"> <img class="integrated_image" src="png/button_cbu_01.png">
+                                    </div>
+                                    <div class="swiper-slide"> <img class="integrated_image" src="png/button_cbu_02.png">
+                                    </div>
+                                    <div class="swiper-slide"> <img class="integrated_image" src="png/button_cbu_03.png">
+                                    </div>
+                                    <div class="swiper-slide"> <img class="integrated_image" src="png/button_cbu_04.png">
+                                    </div>
+                                    <div class="swiper-slide"> <img class="integrated_image" src="png/button_dbu_01.png">
+                                    </div>
+                                    <div class="swiper-slide"> <img class="integrated_image" src="png/button_dbu_02.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about_people">
+                            <img class="page_background people" src="png/cummins_people.png" alt="">
+                        </div>
+                        <div class="about_pages">
+                            <ul>
+                                <li>
+                                    <img id="about_history" class="about_page_buttons" src="png/button_about_history_dn.png" style="width: 17vw;">
+                                </li>
+                                <li>
+                                    <img id="about_it" class="about_page_buttons" src="extra/button_about_it.png" style="width: 20vw;">
+                                </li>
+                                <li>
+                                    <img id="about_people" class="about_page_buttons" src="png/button_about_people.png" style="width: 15vw;">
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- end about page -->
+                </div>
+            </div>
+            <!-- homepage top -->
+
+
+            <div class="col-xs-4">
+
+                <!--<div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Attract Loop 1
+        <span class="caret"></span></button>
+          <ul class="dropdown-menu" style="left:auto;">
+            <li><a href="#">Happy Mode</a></li>
+            <li><a href="#">Sad Mode</a></li>
+            <li><a href="#">Glad Mode</a></li>
+          </ul>
+        </div>-->
+            </div>
+        </div>
+        <div class="row top">
+            <div class="col-xs-12 top_bar">
+
+                <button id="back_preset" type="button" class="btn btn-secondary pull-right">Back</button>
+                <a href="../">
+
+
+                    <button class="edit_mode" type="button" class="btn btn-secondary pull-right">Exit Edit Mode</button>
+                </a>
+                <!--           <a href="../">
+          <button class="edit_mode">Exit Edit Mode</button>
+        </a> -->
+
+            </div>
+
+            <div class="col-xs-8 container">
+                <img class="pencil_top" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">
+
+                <div class="col-xs-1 half_container">
+                    <img src="extra/logo.svg" id="" class="logo">
+                </div>
+                <div class="col-xs-11 half_container">
+                    <h1 id="header"></h1>
+
+                    <h2 id="subheader"></h2>
+                </div>
+            </div>
+
+            <div class="col-xs-3 top_button_container">
+
+                <div class="dropdown">
+                    <img class="pencil_top">
+
+
+                    <div class="dropdown-content" style="width:15vw;">
+
+                        <label name="Mining">Mining
+                            <input class="top_homepage_display" type="checkbox">
+                        </label>
+                        <label name="Well">Well
+                            <input class="top_homepage_display" type="checkbox">
+                        </label>
+                        <label name="Rail">Rail
+                            <input class="top_homepage_display" type="checkbox">
+                        </label>
+
+                        <button id="savetopbuttons" type="button" class="btn btn-primary" style="width:4vw; top:0vw;">Save</button>
+                    </div>
+                </div>
+
+                <button id="mining_button" class="top_homepage_buttons"><img src="png/button_mining.png"></button>
+                <button id="well_services_button" class="top_homepage_buttons"><img src="png/button_well_services_dn.png"></button>
+                <button id="rail_button" class="top_homepage_buttons"><img src="png/button_rail.png"></button>
+                <!-- <a class="edit_mode" id="edit"><img src="png/cog.png" alt=""></a> -->
+
+            </div>
+        </div>
+        <!-- end homepage top -->
+        <!-- homepage body -->
+
+        <div class="row middle">
+            <div class="col-xs-3 container left">
+
+                <img class="middle_left_background">
+
+                <div class="half-container">
+                    <img class="pencil_top" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">
+                    <img class="left_panel_images" id="middle_top_image">
+                    <div class="glass_image" id="middle_top_glass"></div>
+                </div>
+                <div>
+                    <div class="quarter-container">
+                        <img class="left_panel_images" id="middle_middle_image">
+                        <div class="glass_image" id="middle_middle_glass"></div>
+
+                    </div>
+                    <div class="quarter-container">
+                        <img class="left_panel_images" id="middle_bottom_image">
+                        <div class="glass_image" id="middle_bottom_glass"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-xs-6 container center">
+                <!-- machine image sequence -->
+                <div id="machine_display">
+                    <!--<img class="pencil_top"type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">-->
+                    <img class='machine_version' src="png/qsk60_image.png">
+                </div>
+                <ul class="the_hotspots"></ul>
+
+                <!-- qsk95 -->
+                <img class="pencil_middle" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">
+                <!-- machine image sequence -->
+
+            </div>
+            <div class="col-xs-3 container right">
+
+                <div class="container_images">
+                    <img class="pencil_top" type="button" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">
+
+                    <img id="specs_header" class="middle_right_header">
+                    <div class="hotspot_info">
+                        <p id="hotspot_title"></p>
+                        <div id="hotspot_content"></div>
+                    </div>
+                    <img class="middle_right_content default">
+                    <!-- <img class="middle_right_content mode1"> -->
+                    <img id="middle_right_content" class="mode1">
+                    <ul class="specs"></ul>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- end homepage body -->
+
+        <!-- Testing New Modal Here -->
+
+        <!--Main Text Editor Modal for What is 4 final -->
+
+        <div class="modal fade" id="editorfinalModal" tabindex="-3" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content" style="width:36vw; z-index:99999;">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+
+                    <!--Testing new modal here --->
+                    <div class="modal-body" style="height: 34vw; width:34vw;">
+                        <div class="row engines" style="height: 21vw;">
+                            <h1 class="who_am_i"></h1>
+                            <div class="col-xs-2">
+                                <ul class="newpanel_tabs">
+                                    <p>Hide</p>
+                                    <li class="active" id="tr">
+                                        <input name="tier" type="checkbox">Tier 4 Final &#9776;</li>
+                                    <li id="scr">
+                                        <input name="scr" type="checkbox">SCR &#9776;</li>
+                                    <li id="cs">
+                                        <input name="customer" type="checkbox">Customer Care &#9776;</li>
+                                    <li class="dropdown">
+                                        <li id="ab" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            <input id="ab" name="about" type="checkbox">About Cummins &#9776;</li class="caret">
+                                        </span>
+                                        </a>
+
+                                        <ul class="dropdown-menu" style="width:15vw;">
+                                            <li style="margin-left:0;" id="tech">
+                                                <input id="tech" name="tech" type="checkbox">Integrated Technologies &#9776;</li>
+                                            <li style="margin-left:0;" id="people">
+                                                <input id="people" name="pep" type="checkbox">People &#9776;</li>
+
+                                        </ul>
+
+                                    </li>
+
+                                    <!--<li id="ab"><input type="checkbox">About Cummins &#9776;</li>-->
+
+
+                                </ul>
+
+                            </div>
+                            <div class="col-xs-10">
+
+                                <ul class="nav nav-tabs" id="tabContent_2" style="width:29vw; ">
+                                    <li class="active"><a id="tier_tab" href="#tier_tab" data-toggle="tab">Tier 4 Final</a></li>
+                                    <li><a id="src_tab" href="#src_tab" data-toggle="tab">SCR</a></li>
+                                    <li><a id="customer_tab" href="#customer_tab" data-toggle="tab">Customer Care</a></li>
+                                    <li><a id="about_tab" href="#about_tab" data-toggle="tab">About Cummins</a></li>
+
+                                </ul>
+
+                                <div class="tab-content_2">
+                                    <div class="tab-pane active" id="tier_tab">
+
+
+                                        <div class="title_textarea" id="title_tab_2">
+                                            <div class="outer_title_box">
+                                                <h4>Header:</h4>
+                                                <div class="inner_box">
+                                                    <p id="new_header_tab"></p>
+                                                </div>
+                                            </div>
+                                            <div class="outer_title_box">
+
+                                                <h4>Sub-header:</h4>
+                                                <div class="inner_box">
+                                                    <p id="new_subheader_tab"></p>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <!--Text Editor here-->
+                                        <center>
+                                            <form method="POST" action="#" id="form2" style="displya:none;" class="testPosition">
+                                                <div class="row">
+                                                    <div>
+                                                        <!--<input type="text" class="form-control inputarea"  id="textinputarea">-->
+
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="hero-unit">
+
+                                                            <div id="alerts"></div>
+                                                            <div class="btn-toolbar_2" data-role="editor-toolbar" style="margin-left: -100px;" data-target="#editor">
+
+
+                                                                <div class="btn-group">
+                                                                    <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="icon-bold"></i></a>
+                                                                    <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="icon-italic"></i></a>
+
+                                                                    <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="icon-list-ul"></i></a>
+                                                                    <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="icon-list-ol"></i></a>
+                                                                </div>
+                                                                <div class="btn-group">
+                                                                    <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="icon-align-left"></i></a>
+                                                                    <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="icon-align-center"></i></a>
+                                                                    <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="icon-align-right"></i></a>
+                                                                    <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="icon-align-justify"></i></a>
+                                                                </div>
+
+
+                                                            </div>
+
+                                                            <div id="editorFinal"></div>
+                                                            <div id="editorchanllenge" style="display:none;"></div>
+                                                            <div id="dieselEditor" style="display:none;"></div>
+                                                            <div id="selectivecatEditor" style="display:none;"></div>
+                                                            <div id="SCREditor" style="display:none;"></div>
+                                                            <div id="remanufacturingEditor" style="display:none;"></div>
+                                                            <div id="Customer" style="display:none;"></div>
+                                                            <div id="distributorEditor" style="display:none;"></div>
+
+
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <!--<center><button class="btn btn-primary" id="superSave"  type="button">Save</button></center>-->
+                                                        <!--Change the Variable to save here to make it work -->
+                                                    </div>
+                                            </form>
+                                        </center>
+                                        <!--Text Editor End-->
+
+                                        </div>
+
+
+                                        <div class="tab-pane" id="src_tab">
+                                            <ul class="src_tab"></ul>
+
+                                        </div>
+
+
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <button id="superSave" type="button" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End left Panner Modal -->
+
+            <!--End Testing Modals Here -->
+
+        </div>
+
+
+        <footer>
+            <!-- homepage footer -->
+
+            <div class=front>
+                <img class="bottom_bar" src="png/red_bar.png" style="margin-bottom: -0.4%; width: 100%;">
+                <div class="row bottom">
+                    <div class="col-xs-3 bottom_button_container">
+                        <button id="tier_4_final_button1" class="homepage_buttons left">
+                            <img src="png/button_tier4_01.png"></a>
+                        </button>
+                        <button id="scr_button2" class=" scr_button2 homepage_buttons left">
+                            <img src="png/button_scr_02.png">
+                        </button>
+                    </div>
+                    <div class="col-xs-6 container footer">
+
+                        <!-- Swiper -->
+                        <div id="engine_slides" class="swiper-container swiper-container-engines">
+                            <div class="swiper-wrapper">
+                                <div id="qsk67" class="swiper-slide"><img src="png/button_engine_b67.png"></div>
+                                <div id="qsk15" class="swiper-slide"><img src="png/button_engine_x15.png"></div>
+                                <div id="qsk19" class="swiper-slide"><img src="png/button_engine_19.png"></div>
+                                <div id="qsk23" class="swiper-slide"><img src="png/button_engine_23.png"></div>
+                                <div id="qst30" class="swiper-slide"><img src="png/button_engine_30.png"></div>
+                                <div id="qsk38" class="swiper-slide"><img src="png/button_engine_38.png"></div>
+                                <div id="qsk50" class="swiper-slide"><img src="png/button_engine_50.png"></div>
+                                <div id="qsk60" class="swiper-slide"><img src="png/button_engine_60_dn.png"></div>
+                                <div id="qsk78" class="swiper-slide"><img src="png/button_engine_78.png"></div>
+                                <div id="qsk95" class="swiper-slide"><img src="png/button_engine_95.png"></div>
+
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-3 bottom_button_container">
+                        <button id="cc_button3" class="homepage_buttons right"><img src="png/button_cc_03.png"></button>
+                        <button id="about_button" class="homepage_buttons right about"><img src="png/button_about_04.png"></button>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end homepage footer -->
+
+        </footer>
+        <script src="jquery/dist/jquery.min.js"></script>
+        <script src="fullpage.js/dist/jquery.fullPage.min.js"></script>
+        <script src="bootstrap/dist/js/swiper.min.js"></script>
+        <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bootbox/bootbox.min.js"></script>
+        <!--<script src="jquery_reel.js"></script>-->
+        <script src="./node_modules/jquery.cookie/jquery.cookie.js" charset="utf-8"></script>
+        <script src="main2.js"></script>
+        <script src="editComponent.js"></script>
+        <script src="mainComponent.js"></script>
+        <!--Extra Files -->
+        <script src="external/jquery.hotkeys.js"></script>
+        <script src="external/google-code-prettify/prettify.js"></script>
+        <script src="bootstrap-wysiwyg.js"></script>
+        <script src="DisplayTextEditor.js"></script>
+        <script>
+            $(document).ready(function() {    
+                new contentMaster();    
+                new content();
+
+                    
+                setTimeout(function() {      
+                    $('#' + localStorage['current_engine']).trigger('click')    
+                }, 100);
+
+                // Execute when cookies live time expires.    
+                setTimeout(function() {
+                        bootbox.alert({
+                            size: 'small',
+                            message: "Your session has expired. Please log in again.",
+                            callback: function(){
+                                window.location.href = '/login';
+                            }
+                        });
+                    },
+                    60 * (1000 * 30)); // Redirect after 30 mins
+            });
+        </script>
+
+
+</body>
+
+</html>

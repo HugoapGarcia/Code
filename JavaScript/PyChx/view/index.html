@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MVL && PCH</title>
+
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" herf="datepicker/css/datepicker.css" />
+    <link rel="stylesheet" href="agenda.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <h1>Paychex && MavenLink</h1> </center>
+
+        <div class="row">
+
+            <div class="col-sm-6">
+                <h3>Select PayChex report to compare</h3>
+                <div class="well">
+                <form  action="/get_file" method="post" enctype="multipart/form-data">
+                    <label for="file">Require Input File:</label>
+                    <input type="file" name="file" id="file"><br>
+                    <input type="submit" class="btn btn-primary" name="submit" id="paychex" value="Submit Paychex">
+                    <!--<button type="button" class="btn btn-primary" id="submit">Submit</button>-->
+                </form>
+                <div style="margin-top: 1em;"></div>
+                <!--Input Maven report-->
+                <form  action="/get_mv_file" method="post" enctype="multipart/form-data">
+                    <label for="file">Require Input File:</label>
+                    <input type="file" name="file" id="file"><br>
+                    <input type="submit" class="btn btn-primary" name="submit" id="maven" value="Submit Maven">
+                    <!--<button type="button" class="btn btn-primary" id="submit">Submit</button>-->
+                </form>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+                <h3>Please select the start and end point to compare</h3>
+
+                <div class="well">
+                    Start date : <input id="start" class="datepicker" type="text" name="date"> End date : <input id="end" class="datepicker" type="text" name="date">
+                  <div style="margin-top: 1em;">
+                    <button type="button" class="btn btn-primary" id="submit">Submit & Compare</button>
+                  </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <!--separator-->
+    <div style="margin-top: 3em;"></div>
+
+    <!-- results table -->
+
+    <div class="container">
+
+
+            <center>
+              <h1 class="date"></h1>
+              <h2>Vacation hrs Table</h2>
+            </center>
+
+
+            <table class="table table-hover table-bordered" id="myTable">
+                <thead>
+                    <tr class="success">
+                        <th>Employee Name</th>
+                        <th>Employee Email</th>
+                        <th>Role</th>
+                        <th>
+                          <button  class='btn vacation btn-default btn-xs glyphicon glyphicon-eye-open pull-left'></button>
+                          PayChex Vacation
+                        </th>
+                        <th>
+                          <button  class='btn vacation btn-default btn-xs glyphicon glyphicon-eye-open pull-left'></button>
+                          Maven Vacation
+                        </th>
+                        <th>Unaccounted hrs</th>
+                        <th>
+                          <button type="button" class="btn btn-sm btn-primary pull-right" id="email">Send email</button>
+                          <button type="button" class="btn btn-sm btn-primary pull-left" id="select_all">All</button>
+                        </th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+            <center>
+                <h2>Sick hrs Table</h2></center>
+
+            <table class="table table-hover table-bordered" id="sickTable">
+                <thead>
+                    <tr class="success">
+                        <th>Employee Name</th>
+                        <th>Employee Email</th>
+                        <th>Role</th>
+                        <th>
+                          <button  class='btn sick btn-default btn-xs glyphicon glyphicon-eye-open pull-left'></button>
+                          PayChex Sick hrs
+                        </th>
+                        <th>
+                          <button  class='btn sick btn-default btn-xs glyphicon glyphicon-eye-open pull-left'></button>
+                          Maven Sick hrs
+                        </th>
+                        <th>Unaccounted hrs</th>
+                        <th>
+                          <button type="button" class="btn btn-sm btn-primary pull-right" id="email">Send email</button>
+                          <button type="button" class="btn btn-sm btn-primary pull-left" id="select_all">All</button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+            <center><h2>Reg hrs Table</h2></center>
+
+            <table class="table table-hover table-bordered" id="regTable">
+                <thead>
+                    <tr class="success">
+                        <th>Employee Name</th>
+                        <th>Employee Email</th>
+                        <th>Role</th>
+                        <th>
+                          <button  class='btn regular btn-default btn-xs glyphicon glyphicon-eye-open pull-left'></button>
+                          PayChex Reg hrs
+                        </th>
+                        <th>
+                          <button  class='btn regular btn-default btn-xs glyphicon glyphicon-eye-open pull-left'></button>
+                          Maven Reg hrs
+                        </th>
+                        <th>Unaccounted hrs</th>
+                        <th>
+                          <button type="button" class="btn btn-sm btn-primary pull-right" id="email">Send email</button>
+                          <button type="button" class="btn btn-sm btn-primary pull-left" id="select_all">All</button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+
+
+    </div> <!--closing container-->
+
+
+
+    <script src="jquery/dist/jquery.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="result.js"></script>
+    <script src="xlsjs/dist/cpexcel.js"></script>
+    <script>
+    new content();
+        $(function() {
+            $('.datepicker').datepicker({
+              format: 'yyyy-mm-dd'
+            });
+        });
+    </script>
+</body>
+
+</html>

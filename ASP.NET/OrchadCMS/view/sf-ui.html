@@ -1,0 +1,1066 @@
+﻿<!DOCTYPE html>
+<html manifest="cache.appcache">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="viewport" content="user-scalable=no" />
+	<link rel="shortcut icon" href="/favicon.ico">
+    <title>Biogen Idec GCP</title>
+    <link rel="stylesheet" type="text/css" href="Content/Css/Reset.css">
+    <link rel="stylesheet" type="text/css" href="Content/Css/Fonts.css">
+    <link rel="stylesheet" type="text/css" href="Content/Css/Main.css">
+    <link rel="stylesheet" type="text/css" href="Content/Css/colorbox.css">
+    <script type="text/javascript" src="Scripts/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="Scripts/jquery-ui-1.10.3.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.colorbox.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.fullscreen-0.3.5.min.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.blink.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.cookie.js"></script>
+	<script type="text/javascript" src="Scripts/iscroll.js"></script>
+    <script type="text/javascript" src="Scripts/offlinecaching.js"></script>
+    <script type="text/javascript" src="Scripts/main.js"></script>
+
+	<!-- This is only for grabbing the height of PDF files -->
+	<script type="text/javascript" src="/Scripts/pdf-js/shared/util.js"></script>
+	<script type="text/javascript" src="/Scripts/pdf-js/display/api.js"></script>
+	<script type="text/javascript">PDFJS.workerSrc = '/Scripts/pdf-js/worker_loader.js';</script>
+    
+	<!--[if lte IE 9]>
+	<link rel="stylesheet" type="text/css" href="Content/Css/Upgrade.css">
+	<![endif]-->
+
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            //LoadSpotlightsList();
+            $.cookie("biogen-search-terms", null);
+            SetWidthToAllCategoryBelts();
+        });
+	</script>
+</head>
+<body>
+
+    <div class="popup_cover"></div>
+
+    <section class="upgrade hide">
+        <div class="text">
+        <p>Thank you for visiting Tecfidera. In order to take advantage of the latest web technologies, a modern web browser is required for this website. You must use one of the following:</p>
+
+        <ul>
+        <li>Internet Explorer 10.0 or higher (Make sure Compatibility View is turned off)</li>
+        <li>Firefox 4.0 or higher</li>
+        <li>Chrome 5.0 or higher</li>
+        <li>Safari 4.1 or higher</li>
+        <li>Opera 11.0 or higher</li>
+        <li>iOS 4.0 or higher (for iPhone, iPod, and iPad devices)</li>
+        <li>Android 2.1 or higher (for Android-powered mobile phones)</li>
+        </ul>
+
+        <p>If you believe you are using one of the browsers listed above and are still seeing this page, or if you need assistance upgrading, please contact your system administrator.</p>
+        </div>
+    </section>
+
+    <section class="fixed">
+
+        <header>
+
+            <section>
+                <h1><span>Tecfidera</span></h1>
+                <div class="divide"></div>
+                <h2 class="gs">Global Communications Platform</h2>
+
+                <div class="navbuttons">
+                    <div class="user_info_container navcontainer">
+                        <a href="javascript:;" class="badge userpanel"><span>User Info</span></a>
+                        <div class="user_info_panel navpanel">
+                            <div class="toparrow"></div>
+                            <div class="user_info_area">
+                                <div class="header_online">
+                                    <p class="name">Signed in as: <strong><span id="loginname"></span></strong></p>
+                                    <p class="id">Identification: <span>Verified</span></p>
+                                </div>
+                                <div class="header_offline">
+                                    <p class="id">Status: <span>Offline</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="site_info_container navcontainer">
+                        <a href="javascript:;" class="badge infopanel"><span>Site Info</span></a>
+                        <div class="site_info_panel navpanel">
+                            <div class="toparrow"></div>
+                            <div class="site_info_area">
+                            <p class="version">v3.0</p>
+                            <ul>
+                                <li><a href="/Content/BiogenTecGSP_QuickRefGuide.pdf" target="_blank"><strong>MANUAL</strong></a></li>
+                                <li><a href="mailto:tecfideragsphelp@biogenidec.com"><strong>SUPPORT</strong></a></li>
+                                <li><a href="/BiogenLogout/%7E%2F" id="logout">LOGOUT</a></li>
+                            </ul>
+                            </div>
+                        </div>
+                            
+                    </div>
+                    <div class="recent_updates_container">
+                        <a href="/recent.html" class="badge mostrecent"><span class="count">0</span><span>Most Recent</span></a>
+                    </div>
+                </div>
+
+            </section>
+
+            <nav class="gradient">
+                <section>
+                    <a href="gs.html" class="category gs"><span>Global Strategies</span></a>
+                    <a href="sf.html" class="category sf selected"><span>Strategic Focus</span></a> 
+                    <a href="rm.html" class="category rm"><span>Documents</span></a>
+                    <div class="category">
+                        <div class="search"><input type="text" name="searchterm" value="Search"><a href="javascript:;"></a></div>
+                        <div class="filter"><a href="javascript:;">Filter Options</a></div>
+                    </div>
+                </section>
+            </nav>
+
+        </header>
+
+    </section>
+
+    <section class="main sf">
+
+        <div class="googlechrome"></div>
+
+        <!-- DYNAMIC CONTENT LOADS HERE -->
+        <div id="sfnodes">
+            <!--
+            <p class="loading">Please be patient, checking for updates.</p>
+            -->
+
+            <article class="primary open">
+                <p class="on inactive" style="display: none;"><a onclick="ToggleArticle(this);" href="javascript:;" class="toggle"><span class="arrow">▼</span>Strategic Focus 1</a></p>
+                <p class="off active" style="display: block;"><a onclick="ToggleArticle(this);" href="javascript:;" class="toggle"><span class="arrow">►</span>Strategic Focus 1</a></p>
+                <div class="extend primary_extend active">
+                    <article class="secondary open">
+                        <div class="category_container">
+                            <a class="category_move move_left disabled" href="javascript:;"></a>
+                            <a class="category_move move_right enabled" href="javascript:;"></a>
+                            <div class="category_belt">
+                                <ul>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_01', this);" href="javascript:;"><span class="downarrow"></span>Internal Training Slide Decks<br />(12)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_02', this);" href="javascript:;"><span class="downarrow"></span>Field Medical Slide Decks<br />(15)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_03', this);" href="javascript:;"><span class="downarrow"></span>Briefing Documents<br />(8)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_04', this);" href="javascript:;"><span class="downarrow"></span>Other<br />(12)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_05', this);" href="javascript:;"><span class="downarrow"></span>More Categories Part 1<br />(1)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_06', this);" href="javascript:;"><span class="downarrow"></span>More Categories Part 2<br />(9)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_07', this);" href="javascript:;"><span class="downarrow"></span>More Categories Part 3<br />(22)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_08', this);" href="javascript:;"><span class="downarrow"></span>More Categories Party 4<br />(25)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_09', this);" href="javascript:;"><span class="downarrow"></span>More Categories Partyer 5<br />(98)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_10', this);" href="javascript:;"><span class="downarrow"></span>More Categories Partying 6<br />(69)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_01">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document A1</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document A2</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+                        <div class="extend secondary_extend inactive itemlist_01_02">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document B</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+                        <div class="extend secondary_extend inactive itemlist_01_03">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document C</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+                        <div class="extend secondary_extend inactive itemlist_01_04">
+
+                            <article class="category">
+                                <p class="on inactive"><a class="toggle" href="javascript:;" onclick="ToggleArticle(this);"><span class="arrow">&#9660;</span> Category 1</a></p>
+                                <p class="off active"><a class="toggle" href="javascript:;" onclick="ToggleArticle(this);"><span class="arrow">&#9658;</span>Category 1</a></p>
+                                <div class="extend category_extend">
+
+                                    <article class="tertiary">
+                                        <div class="strip"></div>
+                                        <div class="item_information">
+                                            <div class="item_information_left"><h2>Document D1</h2><p class="type">Abstract</p></div>
+                                            <div class="item_information_right">
+                                                <p class="authors"></p>
+                                                <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                            </div>
+                                        </div>
+                                        <div class="item_action">
+                                            <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                            <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                        </div>
+                                    </article>
+
+                                    <article class="tertiary">
+                                        <div class="strip"></div>
+                                        <div class="item_information">
+                                            <div class="item_information_left"><h2>Document D2</h2><p class="type">Abstract</p></div>
+                                            <div class="item_information_right">
+                                                <p class="authors"></p>
+                                                <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                            </div>
+                                        </div>
+                                        <div class="item_action">
+                                            <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                            <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                        </div>
+                                    </article>
+                        
+                                </div>
+                            </article>
+
+
+                            <article class="category">
+                                <p class="on inactive"><a class="toggle" href="javascript:;" onclick="ToggleArticle(this);"><span class="arrow">&#9660;</span> Category 2</a></p>
+                                <p class="off active"><a class="toggle" href="javascript:;" onclick="ToggleArticle(this);"><span class="arrow">&#9658;</span>Category 2</a></p>
+                                <div class="extend category_extend">
+
+                                    <article class="tertiary">
+                                        <div class="strip"></div>
+                                        <div class="item_information">
+                                            <div class="item_information_left"><h2>Document D3</h2><p class="type">Abstract</p></div>
+                                            <div class="item_information_right">
+                                                <p class="authors"></p>
+                                                <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                            </div>
+                                        </div>
+                                        <div class="item_action">
+                                            <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                            <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                        </div>
+                                    </article>
+
+                                    <article class="tertiary">
+                                        <div class="strip"></div>
+                                        <div class="item_information">
+                                            <div class="item_information_left"><h2>Document D4</h2><p class="type">Abstract</p></div>
+                                            <div class="item_information_right">
+                                                <p class="authors"></p>
+                                                <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                            </div>
+                                        </div>
+                                        <div class="item_action">
+                                            <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                            <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                        </div>
+                                    </article>
+                        
+                                </div>
+                            </article>
+
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_05">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document E</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_06">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document F</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_07">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document G</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_08">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document H</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_09">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document I</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_10">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document J</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                    </article>
+                </div>
+            </article>
+
+            <article class="primary open">
+                <p class="on inactive" style="display: none;"><a onclick="ToggleArticle(this);" href="javascript:;" class="toggle"><span class="arrow">▼</span>Strategic Focus 1</a></p>
+                <p class="off active" style="display: block;"><a onclick="ToggleArticle(this);" href="javascript:;" class="toggle"><span class="arrow">►</span>Strategic Focus 1</a></p>
+                <div class="extend primary_extend active">
+                    <article class="secondary open">
+                        <div class="category_container">
+                            <a class="category_move move_left disabled" href="javascript:;"></a>
+                            <a class="category_move move_right enabled" href="javascript:;"></a>
+                            <div class="category_belt">
+                                <ul>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_01', this);" href="javascript:;"><span class="downarrow"></span>Internal Training Slide Decks<br />(12)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_02', this);" href="javascript:;"><span class="downarrow"></span>Field Medical Slide Decks<br />(15)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_03', this);" href="javascript:;"><span class="downarrow"></span>Briefing Documents<br />(8)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_04', this);" href="javascript:;"><span class="downarrow"></span>Other<br />(12)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_05', this);" href="javascript:;"><span class="downarrow"></span>More Categories Part 1<br />(1)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_06', this);" href="javascript:;"><span class="downarrow"></span>More Categories Part 2<br />(9)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_07', this);" href="javascript:;"><span class="downarrow"></span>More Categories Part 3<br />(22)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_08', this);" href="javascript:;"><span class="downarrow"></span>More Categories Party 4<br />(25)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_09', this);" href="javascript:;"><span class="downarrow"></span>More Categories Partyer 5<br />(98)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_10', this);" href="javascript:;"><span class="downarrow"></span>More Categories Partying 6<br />(69)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_01">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document A1</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document A2</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+                        <div class="extend secondary_extend inactive itemlist_01_02">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document B</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+                        <div class="extend secondary_extend inactive itemlist_01_03">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document C</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+                        <div class="extend secondary_extend inactive itemlist_01_04">
+
+                            <article class="category">
+                                <p class="on inactive"><a class="toggle" href="javascript:;" onclick="ToggleArticle(this);"><span class="arrow">&#9660;</span> Category 1</a></p>
+                                <p class="off active"><a class="toggle" href="javascript:;" onclick="ToggleArticle(this);"><span class="arrow">&#9658;</span>Category 1</a></p>
+                                <div class="extend category_extend">
+
+                                    <article class="tertiary">
+                                        <div class="strip"></div>
+                                        <div class="item_information">
+                                            <div class="item_information_left"><h2>Document D1</h2><p class="type">Abstract</p></div>
+                                            <div class="item_information_right">
+                                                <p class="authors"></p>
+                                                <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                            </div>
+                                        </div>
+                                        <div class="item_action">
+                                            <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                            <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                        </div>
+                                    </article>
+
+                                    <article class="tertiary">
+                                        <div class="strip"></div>
+                                        <div class="item_information">
+                                            <div class="item_information_left"><h2>Document D2</h2><p class="type">Abstract</p></div>
+                                            <div class="item_information_right">
+                                                <p class="authors"></p>
+                                                <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                            </div>
+                                        </div>
+                                        <div class="item_action">
+                                            <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                            <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                        </div>
+                                    </article>
+
+                                </div>
+                            </article>
+
+
+                            <article class="category">
+                                <p class="on inactive"><a class="toggle" href="javascript:;" onclick="ToggleArticle(this);"><span class="arrow">&#9660;</span> Category 2</a></p>
+                                <p class="off active"><a class="toggle" href="javascript:;" onclick="ToggleArticle(this);"><span class="arrow">&#9658;</span>Category 2</a></p>
+                                <div class="extend category_extend">
+
+                                    <article class="tertiary">
+                                        <div class="strip"></div>
+                                        <div class="item_information">
+                                            <div class="item_information_left"><h2>Document D3</h2><p class="type">Abstract</p></div>
+                                            <div class="item_information_right">
+                                                <p class="authors"></p>
+                                                <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                            </div>
+                                        </div>
+                                        <div class="item_action">
+                                            <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                            <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                        </div>
+                                    </article>
+
+                                    <article class="tertiary">
+                                        <div class="strip"></div>
+                                        <div class="item_information">
+                                            <div class="item_information_left"><h2>Document D4</h2><p class="type">Abstract</p></div>
+                                            <div class="item_information_right">
+                                                <p class="authors"></p>
+                                                <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                            </div>
+                                        </div>
+                                        <div class="item_action">
+                                            <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                            <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                        </div>
+                                    </article>
+
+                                </div>
+                            </article>
+
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_05">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document E</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_06">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document F</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_07">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document G</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_08">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document H</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_09">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document I</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_10">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document J</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                    </article>
+                </div>
+            </article>
+
+            <article class="primary open">
+                <p class="on inactive" style="display: none;"><a onclick="ToggleArticle(this);" href="javascript:;" class="toggle"><span class="arrow">▼</span>Strategic Focus 1</a></p>
+                <p class="off active" style="display: block;"><a onclick="ToggleArticle(this);" href="javascript:;" class="toggle"><span class="arrow">►</span>Strategic Focus 1</a></p>
+                <div class="extend primary_extend active">
+                    <article class="secondary open">
+                        <div class="category_container">
+                            <a class="category_move move_left disabled" href="javascript:;"></a>
+                            <a class="category_move move_right enabled" href="javascript:;"></a>
+                            <div class="category_belt">
+                                <ul>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_01', this);" href="javascript:;"><span class="downarrow"></span>Internal Training Slide Decks<br />(12)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_02', this);" href="javascript:;"><span class="downarrow"></span>Field Medical Slide Decks<br />(15)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_03', this);" href="javascript:;"><span class="downarrow"></span>Briefing Documents<br />(8)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_04', this);" href="javascript:;"><span class="downarrow"></span>Other<br />(12)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_05', this);" href="javascript:;"><span class="downarrow"></span>More Categories Part 1<br />(1)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_06', this);" href="javascript:;"><span class="downarrow"></span>More Categories Part 2<br />(9)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_07', this);" href="javascript:;"><span class="downarrow"></span>More Categories Part 3<br />(22)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_08', this);" href="javascript:;"><span class="downarrow"></span>More Categories Party 4<br />(25)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_09', this);" href="javascript:;"><span class="downarrow"></span>More Categories Partyer 5<br />(98)</a></li>
+                                    <li><a class="toggle" onclick="ToggleGroup('div.itemlist_01_10', this);" href="javascript:;"><span class="downarrow"></span>More Categories Partying 6<br />(69)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_01">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document A1</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document A2</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+                        <div class="extend secondary_extend inactive itemlist_01_02">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document B</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+                        <div class="extend secondary_extend inactive itemlist_01_03">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document C</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+                        <div class="extend secondary_extend inactive itemlist_01_04">
+
+                            <article class="category">
+                                <p class="on inactive"><a class="toggle" href="javascript:;" onclick="ToggleArticle(this);"><span class="arrow">&#9660;</span> Category 1</a></p>
+                                <p class="off active"><a class="toggle" href="javascript:;" onclick="ToggleArticle(this);"><span class="arrow">&#9658;</span>Category 1</a></p>
+                                <div class="extend category_extend">
+
+                                    <article class="tertiary">
+                                        <div class="strip"></div>
+                                        <div class="item_information">
+                                            <div class="item_information_left"><h2>Document D1</h2><p class="type">Abstract</p></div>
+                                            <div class="item_information_right">
+                                                <p class="authors"></p>
+                                                <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                            </div>
+                                        </div>
+                                        <div class="item_action">
+                                            <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                            <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                        </div>
+                                    </article>
+
+                                    <article class="tertiary">
+                                        <div class="strip"></div>
+                                        <div class="item_information">
+                                            <div class="item_information_left"><h2>Document D2</h2><p class="type">Abstract</p></div>
+                                            <div class="item_information_right">
+                                                <p class="authors"></p>
+                                                <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                            </div>
+                                        </div>
+                                        <div class="item_action">
+                                            <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                            <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                        </div>
+                                    </article>
+
+                                </div>
+                            </article>
+
+
+                            <article class="category">
+                                <p class="on inactive"><a class="toggle" href="javascript:;" onclick="ToggleArticle(this);"><span class="arrow">&#9660;</span> Category 2</a></p>
+                                <p class="off active"><a class="toggle" href="javascript:;" onclick="ToggleArticle(this);"><span class="arrow">&#9658;</span>Category 2</a></p>
+                                <div class="extend category_extend">
+
+                                    <article class="tertiary">
+                                        <div class="strip"></div>
+                                        <div class="item_information">
+                                            <div class="item_information_left"><h2>Document D3</h2><p class="type">Abstract</p></div>
+                                            <div class="item_information_right">
+                                                <p class="authors"></p>
+                                                <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                            </div>
+                                        </div>
+                                        <div class="item_action">
+                                            <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                            <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                        </div>
+                                    </article>
+
+                                    <article class="tertiary">
+                                        <div class="strip"></div>
+                                        <div class="item_information">
+                                            <div class="item_information_left"><h2>Document D4</h2><p class="type">Abstract</p></div>
+                                            <div class="item_information_right">
+                                                <p class="authors"></p>
+                                                <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                            </div>
+                                        </div>
+                                        <div class="item_action">
+                                            <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                            <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                        </div>
+                                    </article>
+
+                                </div>
+                            </article>
+
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_05">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document E</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_06">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document F</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_07">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document G</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_08">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document H</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_09">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document I</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                        <div class="extend secondary_extend inactive itemlist_01_10">
+
+                            <article class="tertiary">
+                                <div class="strip"></div>
+                                <div class="item_information">
+                                    <div class="item_information_left"><h2>Document J</h2><p class="type">Abstract</p></div>
+                                    <div class="item_information_right">
+                                        <p class="authors"></p>
+                                        <p class="date"><span class="year">2012</span><br><span class="abbv"></span></p>
+                                    </div>
+                                </div>
+                                <div class="item_action">
+                                    <div style="background-image: url(/Content/Images/CategoryIcons/icon01_abstract.png);" class="item_icon"></div>
+                                    <div class="item_buttons"><a onclick="javascript: RevealPopup(); $('.viewer_stage_title').attr('title','Document A').html('Document A'); PDFLoader('pdf_view', '/Content/Documents/20131202104208-alphatrans.pdf'); $('#viewer_notes').html('');" class="button view" href="javascript:;"><span class="image">•</span><span class="text">View</span></a></div>
+                                </div>
+                            </article>
+
+                        </div>
+
+                    </article>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+    <div class="viewer_container notes_open inactive">
+        <div class="viewer_stage">
+        <p class="viewer_stage_title"></p>
+        <p class="viewer_stage_buttons"><a class="viewer_stage_buttons_fs" href="javascript:;"><span>Full Screen</span></a> <a href="javascript:;" class="viewer_stage_buttons_close"><span>Close</span></a></p>
+        <p class="viewer_stage_buttons_notes rounded12"><a class="viewer_stage_buttons_notes selected" href="javascript:;"><span>Notes</span></a></p>
+            <div class="viewer_stage_object">
+                <div id="iscroll">
+                    <div id="scroller">
+                        <div class="dragger"></div>
+                        <iframe id="pdf_view" src="/Content/loading.pdf" name="viewer_frame"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="viewer_notes">
+            <p class="viewer_notes_title">Global Scientific Platform</p>
+            <div id="viewer_notes" class="viewer_notes_summary"></div>
+        </div>
+    </div>
+
+    <div class="filter_container">
+        <div class="filter_box">
+            <div class="header">
+                <a class="filter_advanced" href="search_advanced.html">Advanced Search</a>
+                <a class="filter_close" href="javascript:;"><span>Close</span></a>
+            </div>
+            <div id="filternodes" class="options"></div>
+        </div>
+        <div class="filter_bottom_gradient"></div>
+    </div>
+
+    <div class="cache_container complete">
+    <p>Offline-cache being updated. Please wait...</p>
+    </div>
+
+    <script type="text/javascript">
+    if (navigator.onLine) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-47999704-1', 'biogenidecgsp.com');
+        ga('send', 'pageview');
+    }
+    </script>
+
+</body>
+</html>
