@@ -1,11 +1,9 @@
-﻿@model BiogenRepository.ViewModels.CategoryAdminListViewModel
-@using BiogenRepository.ViewModels;
-@using Orchard.Utility.Extensions;
+﻿@using Orchard.Utility.Extensions;
 @{
     Script.Require("ShapesBase");
     Script.Require("PropertiesJS");
     Style.Require("PropertiesAdmin");
-    Layout.Title = T("Biogen Repository Manager").ToString();
+    Layout.Title = T("Repository Manager").ToString();
 }
 <div class="notes">
     <p><strong>PLEASE NOTE:</strong> If you notice that the DELETE action is not available for a CATEGORY that you wish to delete, this means that the CATEGORY belongs to a TEMPLATE. Please appropriately edit or delete the TEMPLATE that the CATEGORY belongs to first, then you will have the option to DELETE the CATEGORY.</p>
